@@ -84,6 +84,7 @@
     <Compile Include="MicrosoftResumeQuestionsTests\Q501FindClosestBiggerValueInTreeTests.cs" />
     <Compile Include="MicrosoftResumeQuestionsTests\Q503FindSmallestPositiveMissingIntegerTests - Copy.cs" />
     <Compile Include="MicrosoftResumeQuestionsTests\Q504Put10NumbersInto4X4GridTests.cs" />
+    <Compile Include="MicrosoftResumeQuestionsTests\Q505FindAllMoneyCombinationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Algorithms\StringMatch\BMMatchTests.cs" />
     <Compile Include="HelpersTests.cs" />

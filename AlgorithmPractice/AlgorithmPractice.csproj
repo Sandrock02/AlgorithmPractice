@@ -53,6 +53,7 @@
     <Compile Include="Algorithms\HeapHelper.cs" />
     <Compile Include="Algorithms\TreeRelated\TreeWalk.cs" />
     <Compile Include="Commons\Matrix.cs" />
+    <Compile Include="Commons\MultipleTreeNode.cs" />
     <Compile Include="Commons\Vector.cs" />
     <Compile Include="ResumeQuestions\Q021FindSumMFromNNumbers.cs" />
     <Compile Include="CsvParser.cs" />
@@ -91,6 +92,7 @@
     <Compile Include="OtherStructures\SelfRefObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResumeQuestions\Q504Put10NumbersInto4X4Grid.cs" />
+    <Compile Include="ResumeQuestions\Q505FindAllMoneyCombination.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
