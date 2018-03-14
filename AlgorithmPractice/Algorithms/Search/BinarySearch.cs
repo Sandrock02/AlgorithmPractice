@@ -6,7 +6,7 @@ namespace AlgorithmPractice.Algorithms.Search
     {
         public static int Search(int[] a, int v)
         {
-            if (a == null) throw new ArgumentNullException("a");
+            if (a == null) throw new ArgumentNullException(nameof(a));
 
             var i = 0;
             var j = a.Length - 1;
@@ -28,7 +28,7 @@ namespace AlgorithmPractice.Algorithms.Search
         public static int Search<T>(T[] a, T v)
             where T : IComparable<T>
         {
-            if (a == null) throw new ArgumentNullException("a");
+            if (a == null) throw new ArgumentNullException(nameof(a));
 
             var i = 0;
             var j = a.Length - 1;
