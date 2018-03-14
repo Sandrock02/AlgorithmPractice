@@ -11,7 +11,8 @@
 
         public static long GetNByRecursive(int n)
         {
-            if (n > 20)
+            if (n <= 0) return 0;
+            if (n > 40)
             {
                 var sb = new StringBuilder();
                 sb.AppendLine("The n for this method is too large to execute. The performance might be very low.");
@@ -26,9 +27,10 @@
 
         public static long GetNByIteration(int n)
         {
+            if (n <= 0) return 0;
             long x = 1;
             long y = 1;
-            for (int j = 1; j < n; j++)
+            for (int j = 1; j < n - 1; j++)
             {
                 y = x + y;
                 x = y - x;
@@ -39,6 +41,7 @@
 
         public static long GetNByCommonFormular(int n)
         {
+            if (n <= 0) return 0;
             double x = (1 + Sqrt5) / 2;
             double y = (1 - Sqrt5) / 2;
             return (long)((Math.Pow(x, n) - Math.Pow(y, n)) / Sqrt5 + 0.5);
@@ -46,6 +49,8 @@
 
         public static long GetNByMatrix(int n)
         {
+            if (n <= 0) return 0;
+            if (n <= 2) return 1;
             var m = new Matrix(2, 2);
             m.ele[0, 0] = 1;
             m.ele[0, 1] = 1;
@@ -62,10 +67,10 @@
 
             if (n % 2 == 0)
             {
-                return Power(m * m, n / 2);
+                return Power(m | m, n / 2);
             }
 
-            return Power(m * m, n / 2) * m;
+            return Power(m | m, n / 2) | m;
         }
     }
 }

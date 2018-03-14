@@ -60,6 +60,7 @@
     <Compile Include="Algorithms\HeapHelperTests.cs" />
     <Compile Include="Algorithms\TreeRelated\TreeGenerator.cs" />
     <Compile Include="Algorithms\TreeRelated\TreeWalkTests.cs" />
+    <Compile Include="Algorithms\FibonacciTests.cs" />
     <Compile Include="ClosureTests.cs" />
     <Compile Include="MicrosoftResumeQuestionsTests\Q021FindSumMFromNNumbersTests.cs" />
     <Compile Include="MicrosoftResumeQuestionsTests\Q026LeftShiftStringTests.cs" />
