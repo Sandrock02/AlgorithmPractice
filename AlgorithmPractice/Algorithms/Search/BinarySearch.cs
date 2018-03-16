@@ -13,7 +13,7 @@ namespace AlgorithmPractice.Algorithms.Search
 
             while (i <= j)
             {
-                var m = i + (j - i) / 2;
+                var m = i + (j - i) >> 1;
                 if (v == a[m]) return m;
 
                 if (v < a[m])
@@ -35,7 +35,7 @@ namespace AlgorithmPractice.Algorithms.Search
 
             while (i <= j)
             {
-                var m = i + (j - i) / 2;
+                var m = i + (j - i) >> 1;
                 if (v.CompareTo(a[m]) == 0) return m;
 
                 if (v.CompareTo(a[m]) < 0)
