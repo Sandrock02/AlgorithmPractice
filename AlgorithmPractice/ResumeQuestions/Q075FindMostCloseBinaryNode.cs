@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AlgorithmPractice.MicrosoftResumeQuestions
+namespace AlgorithmPractice.ResumeQuestions
 {
     public class Q075FindMostCloseBinaryNode
     {

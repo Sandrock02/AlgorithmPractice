@@ -1,6 +1,6 @@
 ﻿namespace AlgorithmPracticeTest.MicrosoftResumeQuestionsTests
 {
-    using AlgorithmPractice.MicrosoftResumeQuestions;
+    using AlgorithmPractice.ResumeQuestions;
 
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 

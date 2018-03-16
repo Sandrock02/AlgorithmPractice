@@ -88,7 +88,7 @@
             return result;
         } 
 
-        private static void PreOrderNormal<T>(BinaryTreeNode<T> tree, List<T> output) where T : IComparable<T>
+        public static void PreOrderNormal<T>(BinaryTreeNode<T> tree, List<T> output) where T : IComparable<T>
         {
             var stack = new Stack<BinaryTreeNode<T>>();
             stack.Push(tree);
@@ -107,7 +107,7 @@
             }
         }
 
-        private static void MidOrderNormal<T>(BinaryTreeNode<T> tree, List<T> output) where T : IComparable<T>
+        public static void MidOrderNormal<T>(BinaryTreeNode<T> tree, List<T> output) where T : IComparable<T>
         {
             if (tree == null)
             {
@@ -146,7 +146,28 @@
             }
         }
 
-        private static void PostOrderNormal<T>(BinaryTreeNode<T> tree, Stack<T> output) where T : IComparable<T>
+        public static void MidOrderNormal2<T>(BinaryTreeNode<T> tree, List<T> output) where T : IComparable<T>
+        {
+            var stack = new Stack<BinaryTreeNode<T>>();
+            var node = tree;
+            while (node != null || stack.Count > 0)
+            {
+                while (node != null)
+                {
+                    stack.Push(node);
+                    node = node.LeftChild;
+                }
+
+                if (stack.Count > 0)
+                {
+                    node = stack.Pop();
+                    output.Add(node.Value);
+                    node = node.RightChild;
+                }
+            }
+        }
+
+        public static void PostOrderNormal<T>(BinaryTreeNode<T> tree, Stack<T> output) where T : IComparable<T>
         {
             var stack = new Stack<BinaryTreeNode<T>>();
             stack.Push(tree);
@@ -165,7 +186,7 @@
             }
         }
 
-        private static void PreOrderRecursively<T>(BinaryTreeNode<T> tree, List<T> output) where T : IComparable<T>
+        public static void PreOrderRecursively<T>(BinaryTreeNode<T> tree, List<T> output) where T : IComparable<T>
         {
             if (tree == null)
             {
@@ -177,7 +198,7 @@
             PreOrderRecursively(tree.RightChild, output);
         }
 
-        private static void PostOrderRecursively<T>(BinaryTreeNode<T> tree, List<T> output) where T : IComparable<T>
+        public static void PostOrderRecursively<T>(BinaryTreeNode<T> tree, List<T> output) where T : IComparable<T>
         {
             if (tree == null)
             {
@@ -189,7 +210,7 @@
             output.Add(tree.Value);
         }
 
-        private static void MidOrderRecursively<T>(BinaryTreeNode<T> tree, List<T> output) where T : IComparable<T>
+        public static void MidOrderRecursively<T>(BinaryTreeNode<T> tree, List<T> output) where T : IComparable<T>
         {
             if (tree == null)
             {

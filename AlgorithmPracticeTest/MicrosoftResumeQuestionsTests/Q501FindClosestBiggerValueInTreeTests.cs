@@ -1,7 +1,7 @@
 ﻿namespace AlgorithmPracticeTest.MicrosoftResumeQuestionsTests
 {
     using AlgorithmPractice.Commons;
-    using AlgorithmPractice.MicrosoftResumeQuestions;
+    using AlgorithmPractice.ResumeQuestions;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     public partial class MicrosoftResumeQuestionsTests

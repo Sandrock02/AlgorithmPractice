@@ -17,10 +17,15 @@ namespace AlgorithmPractice.Algorithms.Sort
                 while (i != j)
                 {
                     while (i < j && a[j] > t)
+                    {
                         j--;
+                    }
                     if (i < j) a[i++] = a[j];
+
                     while (i < j && a[i] <= t)
+                    {
                         i++;
+                    }
                     if (i < j) a[j--] = a[i];
                 }
 

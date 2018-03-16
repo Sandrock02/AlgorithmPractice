@@ -1,4 +1,4 @@
-﻿namespace AlgorithmPractice.MicrosoftResumeQuestions
+﻿namespace AlgorithmPractice.ResumeQuestions
 {
     using System;
     using System.Linq;
@@ -62,7 +62,7 @@
 
             if (array.Length == 0)
             {
-                throw new ArgumentException("The array is empty.", "array");
+                throw new ArgumentException("The array is empty.", nameof(array));
             }
 
             // Initialize the sum result array with minimum value.

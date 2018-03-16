@@ -56,7 +56,7 @@
                 var c = data[8 + i] ? 1 : 0;
                 var d = data[12 + i] ? 1 : 0;
 
-                if((a+b+c+d) % 2 == 1) return false;
+                if ((a + b + c + d) % 2 == 1) return false;
             }
 
             return true;

@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace AlgorithmPractice.MicrosoftResumeQuestions
+namespace AlgorithmPractice.ResumeQuestions
 {
     public static class Q010ReverseSetenceByWords
     {

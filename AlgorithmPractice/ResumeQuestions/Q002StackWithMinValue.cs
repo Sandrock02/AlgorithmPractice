@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace AlgorithmPractice.MicrosoftResumeQuestions
+namespace AlgorithmPractice.ResumeQuestions
 {
     /// <summary>
     /// 

@@ -2,7 +2,7 @@
  * 题目描述：定义字符串的左旋转操作：把字符串前面的若干个字符移动到字符串的尾部，如把字符串abcdef左旋转2位得到字符串cdefab。
  */
 
-namespace AlgorithmPractice.MicrosoftResumeQuestions
+namespace AlgorithmPractice.ResumeQuestions
 {
     public static class Q026LeftShiftArray
     {

@@ -1,4 +1,4 @@
-﻿namespace AlgorithmPractice.MicrosoftResumeQuestions
+﻿namespace AlgorithmPractice.ResumeQuestions
 {
     using AlgorithmPractice.Commons;
 

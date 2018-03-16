@@ -1,5 +1,5 @@
 ﻿using AlgorithmPractice.Commons;
-using AlgorithmPractice.MicrosoftResumeQuestions;
+using AlgorithmPractice.ResumeQuestions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;

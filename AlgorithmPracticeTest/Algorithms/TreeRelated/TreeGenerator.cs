@@ -25,5 +25,31 @@
 
             return root;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        ///          A
+        ///         / \
+        ///        B   C
+        ///       /   / \
+        ///       D   E F
+        ///          /
+        ///         G
+        /// </remarks>
+        /// <returns></returns>
+        public static BinaryTreeNode<string> GetSimpleTree()
+        {
+            var root = new BinaryTreeNode<string>(
+                "A",
+                new BinaryTreeNode<string>("B", new BinaryTreeNode<string>("D")),
+                new BinaryTreeNode<string>("C", 
+                    new BinaryTreeNode<string>("E",
+                        new BinaryTreeNode<string>("G")), 
+                    new BinaryTreeNode<string>("F")));
+
+            return root;
+        }
     }
 }

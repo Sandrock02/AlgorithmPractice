@@ -1,4 +1,4 @@
-﻿namespace AlgorithmPractice.MicrosoftResumeQuestions
+﻿namespace AlgorithmPractice.ResumeQuestions
 {
     using System;
     using System.Collections.Generic;

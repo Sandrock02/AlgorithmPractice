@@ -1,4 +1,4 @@
-﻿namespace AlgorithmPractice.MicrosoftResumeQuestions
+﻿namespace AlgorithmPractice.ResumeQuestions
 {
     /* 
      * Find smallest positive missing integer from an array

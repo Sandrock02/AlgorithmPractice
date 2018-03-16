@@ -4,7 +4,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AlgorithmPractice.Commons;
 
-namespace AlgorithmPractice.MicrosoftResumeQuestions
+namespace AlgorithmPractice.ResumeQuestions
 {
     /// <summary>
     /// 
@@ -34,7 +34,7 @@ namespace AlgorithmPractice.MicrosoftResumeQuestions
         public static LinkedNode<T> ReverseRecursive<T>(LinkedNode<T> head)
             where T : IComparable<T>
         {
-            if (head == null || head.Next == null) return head;
+            if (head?.Next == null) return head;
 
             LinkedNode<T> node = ReverseRecursive(head.Next);
             head.Next.Next = head;

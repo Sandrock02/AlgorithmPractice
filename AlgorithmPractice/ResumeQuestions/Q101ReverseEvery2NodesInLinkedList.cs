@@ -1,7 +1,7 @@
 ﻿using System;
 using AlgorithmPractice.Commons;
 
-namespace AlgorithmPractice.MicrosoftResumeQuestions
+namespace AlgorithmPractice.ResumeQuestions
 {
     public static class Q101ReverseEvery2NodesInLinkedList
     {

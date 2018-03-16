@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AlgorithmPractice.Commons;
-using AlgorithmPractice.MicrosoftResumeQuestions;
+using AlgorithmPractice.ResumeQuestions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace AlgorithmPracticeTest.MicrosoftResumeQuestionsTests

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AlgorithmPractice.MicrosoftResumeQuestions
+namespace AlgorithmPractice.ResumeQuestions
 {
     /// <summary>
     /// 

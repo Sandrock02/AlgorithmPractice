@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AlgorithmPractice.Commons;
 
-namespace AlgorithmPractice.MicrosoftResumeQuestions
+namespace AlgorithmPractice.ResumeQuestions
 {
     /// <summary>
     /// 

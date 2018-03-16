@@ -1,4 +1,6 @@
-﻿namespace AlgorithmPracticeTest.Algorithms.TreeRelated
+﻿using System.Collections.Generic;
+
+namespace AlgorithmPracticeTest.Algorithms.TreeRelated
 {
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using AlgorithmPractice.Algorithms.TreeRelated;
@@ -15,6 +17,12 @@
             var expected = "A B D E C F G";
 
             Assert.AreEqual(expected, actual);
+
+            root = TreeGenerator.GetSimpleTree();
+            result = TreeWalk.PreOrderWalk(root, TreeWalk.TreeWalkType.Recursively);
+            actual = string.Join(" ", result);
+            expected = "A B D C E G F";
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
@@ -25,6 +33,12 @@
             var actual = string.Join(" ", result);
             var expected = "D B E A F C G";
 
+            Assert.AreEqual(expected, actual);
+
+            root = TreeGenerator.GetSimpleTree();
+            result = TreeWalk.MidOrderWalk(root, TreeWalk.TreeWalkType.Recursively);
+            actual = string.Join(" ", result);
+            expected = "D B A G E C F";
             Assert.AreEqual(expected, actual);
         }
 
@@ -37,6 +51,12 @@
             var expected = "D E B F G C A";
 
             Assert.AreEqual(expected, actual);
+
+            root = TreeGenerator.GetSimpleTree();
+            result = TreeWalk.PostOrderWalk(root, TreeWalk.TreeWalkType.Recursively);
+            actual = string.Join(" ", result);
+            expected = "D B G E F C A";
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
@@ -47,6 +67,12 @@
             var actual = string.Join(" ", result);
             var expected = "A B D E C F G";
 
+            Assert.AreEqual(expected, actual);
+
+            root = TreeGenerator.GetSimpleTree();
+            result = TreeWalk.PreOrderWalk(root);
+            actual = string.Join(" ", result);
+            expected = "A B D C E G F";
             Assert.AreEqual(expected, actual);
         }
 
@@ -59,6 +85,31 @@
             var expected = "D B E A F C G";
 
             Assert.AreEqual(expected, actual);
+
+            root = TreeGenerator.GetSimpleTree();
+            result = TreeWalk.MidOrderWalk(root);
+            actual = string.Join(" ", result);
+            expected = "D B A G E C F";
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void TestMidOrderNormal2()
+        {
+            var root = TreeGenerator.GetSimpleNormalTree();
+            var result = new List<string>();
+            TreeWalk.MidOrderNormal2(root, result);
+            var actual = string.Join(" ", result);
+            var expected = "D B E A F C G";
+
+            Assert.AreEqual(expected, actual);
+
+            root = TreeGenerator.GetSimpleTree();
+            result = new List<string>();
+            TreeWalk.MidOrderNormal2(root, result);
+            actual = string.Join(" ", result);
+            expected = "D B A G E C F";
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
@@ -69,6 +120,12 @@
             var actual = string.Join(" ", result);
             var expected = "D E B F G C A";
 
+            Assert.AreEqual(expected, actual);
+
+            root = TreeGenerator.GetSimpleTree();
+            result = TreeWalk.PostOrderWalk(root);
+            actual = string.Join(" ", result);
+            expected = "D B G E F C A";
             Assert.AreEqual(expected, actual);
         }
 
