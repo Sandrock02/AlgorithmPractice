@@ -94,6 +94,7 @@
     <Compile Include="ResumeQuestions\Q504Put10NumbersInto4X4Grid.cs" />
     <Compile Include="ResumeQuestions\Q505FindAllMoneyCombination.cs" />
     <Compile Include="ResumeQuestions\Q506SimulateQueueWith2Stacks.cs" />
+    <Compile Include="ResumeQuestions\Q507ConvertStringToInt.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
