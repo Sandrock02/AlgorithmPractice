@@ -1,7 +1,7 @@
 ﻿namespace AlgorithmPractice.ResumeQuestions
 {
     using System;
-    using System.Linq;
+    using AlgorithmPractice.Commons;
 
     /// <summary>
     /// Algorithm for get biggest sub array sum
@@ -26,7 +26,7 @@
 
             if (array.Length == 0)
             {
-                throw new ArgumentException("The array is empty.", "array");
+                throw new ArgumentException("The array is empty.", nameof(array));
             }
 
             long sum = 0;
@@ -107,15 +107,10 @@
             }
 
             // Return Max { Sum(i-1), Sum(i-2) + array[i], array[i] }
-            return FindMax(
+            return MathHelper.Max(
                 FindNonContinuesRecursively2(array, sums, i - 1),
                 FindNonContinuesRecursively2(array, sums, i - 2) + array[i],
                 array[i]);
-        }
-
-        private static long FindMax(params long[] values)
-        {
-            return values.Max();
         }
     }
 }

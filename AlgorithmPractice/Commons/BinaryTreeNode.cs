@@ -5,10 +5,6 @@
     public class BinaryTreeNode<T> : IComparable
         where T: IComparable<T>
     {
-        public BinaryTreeNode()
-        {
-        }
-
         public BinaryTreeNode(T value, BinaryTreeNode<T> leftChild = null, BinaryTreeNode<T> rightChild = null  )
         {
             this.Value = value;

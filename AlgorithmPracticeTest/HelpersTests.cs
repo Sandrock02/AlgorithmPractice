@@ -45,13 +45,13 @@ namespace AlgorithmPracticeTest
 
         #endregion
 
-        #region Test Revert<T> method
+        #region Test Reverse<T> method
         [TestMethod]
         public void TestRevert()
         {
             char[] actual = "abcdefghijklmnopqrstuvwxyz".ToCharArray();
             var expected = "cbadefghijklmnopqrstuvwxyz".ToCharArray();
-            CommonHelpers.Revert(actual, 0, 3);
+            CommonHelpers.Reverse(actual, 0, 3);
             CollectionAssert.AreEqual(expected, actual);
         }
 

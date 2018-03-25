@@ -54,9 +54,9 @@ namespace AlgorithmPractice.ResumeQuestions
             shiftLength = (shiftLength % array.Length + array.Length) % array.Length;
             if (shiftLength == 0) return array;
 
-            CommonHelpers.Revert(array, 0, shiftLength);
-            CommonHelpers.Revert(array, shiftLength, array.Length - shiftLength);
-            CommonHelpers.Revert(array, 0, array.Length);
+            CommonHelpers.Reverse(array, 0, shiftLength);
+            CommonHelpers.Reverse(array, shiftLength, array.Length - shiftLength);
+            CommonHelpers.Reverse(array, 0, array.Length);
             return array;
         }
 

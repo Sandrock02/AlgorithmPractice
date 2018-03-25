@@ -36,7 +36,7 @@ namespace AlgorithmPractice
         /// <param name="array">需要逆转的数组</param>
         /// <param name="startIndex">开始索引</param>
         /// <param name="length">逆转的长度</param>
-        public static void Revert<T>(T[] array, int startIndex, int length)
+        public static void Reverse<T>(T[] array, int startIndex, int length)
         {
             if (array == null)
                 throw new ArgumentNullException("array");
@@ -61,11 +61,6 @@ namespace AlgorithmPractice
                 startIndex++;
                 endIndex--;
             }
-        }
-
-        public static T FindMax<T>(params T[] values)
-        {
-            return values.Max();
         }
     }
 }

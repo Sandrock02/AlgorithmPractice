@@ -1,12 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace AlgorithmPractice.Algorithms
 {
     public class FindKMin
     {
-        private const int MAXLEN = 123456;
-        private const int K = 100;
-
         void HeapAdjust(int[] array, int length, int i)
         {
             // 最小堆
@@ -55,29 +54,37 @@ namespace AlgorithmPractice.Algorithms
             return min;
         }
 
-        void KMin(int[] array, int k)
+        public List<int> KMin(int[] array, int k)
         {
             var length = array.Length;
             for (var i = length / 2 - 1; i >= 0; --i)
                 HeapAdjust(array, length, i);
 
             var j = length;
+            var result = new List<int>();
             for (var i = k; i > 0; --i, --j)
             {
                 var min = GetMin(array, j, i);
-                Console.WriteLine(min);
+                result.Add(min);
             }
 
+            return result;
         }
 
-        public int Main()
+        public List<int> KMin2(int[] array, int k)
         {
-            var array = new int[MAXLEN];
-            for (var i = MAXLEN; i > 0; --i)
-                array[MAXLEN - i] = i;
+            HeapHelper.BuildMaxHeap(array, k);
 
-            KMin(array, K);
-            return 0;
+            for (int i = k; i < array.Length; i++)
+            {
+                if (array[i] < array[0])
+                {
+                    Swap(ref array[i], ref array[0]);
+                    HeapHelper.BuildMaxHeap(array, k);
+                }
+            }
+
+            return array.Take(k).ToList();
         }
     }
 }

@@ -34,5 +34,17 @@ namespace AlgorithmPracticeTest.Algorithms
             Console.WriteLine("  Actual: {0}", string.Join(", ", array));
             CollectionAssert.AreEqual(expected, array);
         }
+        
+        [TestMethod]
+        public void BuildMaxHeapTest2()
+        {
+            var array = new[] { 11, 19, 71, 34, 47, 38, 55, 1, 33, 69 };
+            var expected = new[] { 71, 69, 55, 34, 47, 38, 11, 1, 33, 19};
+            HeapHelper.BuildMaxHeap(array);
+
+            Console.WriteLine("Expected: {0}", string.Join(", ", expected));
+            Console.WriteLine("  Actual: {0}", string.Join(", ", array));
+            CollectionAssert.AreEqual(expected, array);
+        }
     }
 }
