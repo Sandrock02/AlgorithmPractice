@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using AlgorithmPractice.ResumeQuestions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -91,6 +92,30 @@ namespace AlgorithmPracticeTest.MicrosoftResumeQuestionsTests
         public void TestConvertString_IncludeDotString()
         {
             var input = "12345.6";
+            var actual = Q507ConvertStringToInt.ConvertString(input);
+            Assert.AreEqual(12345, actual);
+        }
+
+        [TestMethod]
+        public void TestConvertString_DECulture()
+        {
+            var input = "12345,6";
+            var actual = Q507ConvertStringToInt.ConvertString(input, new CultureInfo("De-de"));
+            Assert.AreEqual(12345, actual);
+        }
+
+        [TestMethod]
+        public void TestConvertString_DECultureGroup()
+        {
+            var input = "12.345,6";
+            var actual = Q507ConvertStringToInt.ConvertString(input, new CultureInfo("De-de"));
+            Assert.AreEqual(12345, actual);
+        }
+
+        [TestMethod]
+        public void TestConvertString_Group()
+        {
+            var input = "12,345.6";
             var actual = Q507ConvertStringToInt.ConvertString(input);
             Assert.AreEqual(12345, actual);
         }
