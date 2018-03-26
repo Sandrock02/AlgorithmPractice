@@ -29,6 +29,7 @@ namespace AlgorithmPractice.ResumeQuestions
                 if (IsMatching(str, ref cur, formatInfo.PositiveSign)) sign = 1;
                 else if (IsMatching(str, ref cur, formatInfo.NegativeSign)) sign = -1;
                 else if (IsMatching(str, ref cur, formatInfo.NumberDecimalSeparator)) break;
+                else if (IsMatching(str, ref cur, formatInfo.NumberGroupSeparator)) { }
                 else if (IsDigital(ch))
                 {
                     c = ch - '0';
@@ -37,9 +38,10 @@ namespace AlgorithmPractice.ResumeQuestions
                     {
                         throw new Exception("The input number is greater than 2147483647.");
                     }
-                    else if (sign < 0 && num >= (int.MaxValue / 10) && c > int.MaxValue % 10 + 1)
+
+                    if (sign < 0 && num >= (int.MaxValue / 10) && c > (int.MaxValue - 9) % 10)
                     {
-                        throw new Exception("The input number is smaller than -2147483649.");
+                        throw new Exception("The input number is smaller than -2147483648.");
                     }
 
                     num = num * 10 + c;

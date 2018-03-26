@@ -8,7 +8,7 @@
 
             while (n > 0)
             {
-                var j = 0;
+                var j = 0; // Temp variable to store the last swapped index.
                 for (var i = 0; i < n; i++)
                 {
                     if (a[i] > a[i + 1])
@@ -19,7 +19,7 @@
                         j = i;
                     }
                 }
-                n = j;
+                n = j; // Skip to the swapped index to check further.
             }
         }
     }

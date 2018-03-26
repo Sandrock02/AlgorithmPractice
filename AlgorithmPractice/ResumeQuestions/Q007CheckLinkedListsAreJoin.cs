@@ -43,6 +43,7 @@ namespace AlgorithmPractice.ResumeQuestions
             if (r1 == null && r2 == null) return AreJoin(h1, h2);
             if (r1 == null || r2 == null) return false;
 
+            // 为了检查当一个链表的循环头在另一个链表的环内
             LinkedNode<T> p = r1;
             while (true)
             {
