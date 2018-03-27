@@ -6,13 +6,13 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace AlgorithmPracticeTest.MicrosoftResumeQuestionsTests
 {
     [TestClass]
-    public class Q507ConvertStringToIntTests
+    public class Q020ConvertStringToIntTests
     {
         [TestMethod]
         public void TestConvertString_Normal()
         {
             var input = "123456";
-            var actual = Q507ConvertStringToInt.ConvertString(input);
+            var actual = Q020ConvertStringToInt.ConvertString(input);
             Assert.AreEqual(123456, actual);
         }
 
@@ -20,7 +20,7 @@ namespace AlgorithmPracticeTest.MicrosoftResumeQuestionsTests
         public void TestConvertString_PositiveValue()
         {
             var input = "+123456";
-            var actual = Q507ConvertStringToInt.ConvertString(input);
+            var actual = Q020ConvertStringToInt.ConvertString(input);
             Assert.AreEqual(123456, actual);
         }
 
@@ -28,7 +28,7 @@ namespace AlgorithmPracticeTest.MicrosoftResumeQuestionsTests
         public void TestConvertString_NagetiveValue()
         {
             var input = "-123456";
-            var actual = Q507ConvertStringToInt.ConvertString(input);
+            var actual = Q020ConvertStringToInt.ConvertString(input);
             Assert.AreEqual(-123456, actual);
         }
 
@@ -36,7 +36,7 @@ namespace AlgorithmPracticeTest.MicrosoftResumeQuestionsTests
         public void TestConvertString_MaxInt()
         {
             var input = "2147483647";
-            var actual = Q507ConvertStringToInt.ConvertString(input);
+            var actual = Q020ConvertStringToInt.ConvertString(input);
             Assert.AreEqual(2147483647, actual);
         }
 
@@ -44,7 +44,7 @@ namespace AlgorithmPracticeTest.MicrosoftResumeQuestionsTests
         public void TestConvertString_MinInt()
         {
             var input = "-2147483648";
-            var actual = Q507ConvertStringToInt.ConvertString(input);
+            var actual = Q020ConvertStringToInt.ConvertString(input);
             Assert.AreEqual(-2147483648, actual);
         }
 
@@ -53,7 +53,7 @@ namespace AlgorithmPracticeTest.MicrosoftResumeQuestionsTests
         public void TestConvertString_EmptyString()
         {
             var input = "";
-            Q507ConvertStringToInt.ConvertString(input);
+            Q020ConvertStringToInt.ConvertString(input);
         }
 
         [TestMethod]
@@ -61,7 +61,7 @@ namespace AlgorithmPracticeTest.MicrosoftResumeQuestionsTests
         public void TestConvertString_AllNonNumString()
         {
             var input = "aaaaaaa";
-            Q507ConvertStringToInt.ConvertString(input);
+            Q020ConvertStringToInt.ConvertString(input);
         }
 
         [TestMethod]
@@ -69,7 +69,7 @@ namespace AlgorithmPracticeTest.MicrosoftResumeQuestionsTests
         public void TestConvertString_MaxOverflow()
         {
             var input = "2147483648";
-            Q507ConvertStringToInt.ConvertString(input);
+            Q020ConvertStringToInt.ConvertString(input);
         }
 
         [TestMethod]
@@ -77,7 +77,7 @@ namespace AlgorithmPracticeTest.MicrosoftResumeQuestionsTests
         public void TestConvertString_MinOverflow()
         {
             var input = "-2147483649";
-            Q507ConvertStringToInt.ConvertString(input);
+            Q020ConvertStringToInt.ConvertString(input);
         }
 
         [TestMethod]
@@ -85,14 +85,14 @@ namespace AlgorithmPracticeTest.MicrosoftResumeQuestionsTests
         public void TestConvertString_IncludeNonNumString()
         {
             var input = "12345a";
-            Q507ConvertStringToInt.ConvertString(input);
+            Q020ConvertStringToInt.ConvertString(input);
         }
 
         [TestMethod]
         public void TestConvertString_IncludeDotString()
         {
             var input = "12345.6";
-            var actual = Q507ConvertStringToInt.ConvertString(input);
+            var actual = Q020ConvertStringToInt.ConvertString(input);
             Assert.AreEqual(12345, actual);
         }
 
@@ -100,7 +100,7 @@ namespace AlgorithmPracticeTest.MicrosoftResumeQuestionsTests
         public void TestConvertString_DECulture()
         {
             var input = "12345,6";
-            var actual = Q507ConvertStringToInt.ConvertString(input, new CultureInfo("De-de"));
+            var actual = Q020ConvertStringToInt.ConvertString(input, new CultureInfo("De-de"));
             Assert.AreEqual(12345, actual);
         }
 
@@ -108,7 +108,7 @@ namespace AlgorithmPracticeTest.MicrosoftResumeQuestionsTests
         public void TestConvertString_DECultureGroup()
         {
             var input = "12.345,6";
-            var actual = Q507ConvertStringToInt.ConvertString(input, new CultureInfo("De-de"));
+            var actual = Q020ConvertStringToInt.ConvertString(input, new CultureInfo("De-de"));
             Assert.AreEqual(12345, actual);
         }
 
@@ -116,7 +116,7 @@ namespace AlgorithmPracticeTest.MicrosoftResumeQuestionsTests
         public void TestConvertString_Group()
         {
             var input = "12,345.6";
-            var actual = Q507ConvertStringToInt.ConvertString(input);
+            var actual = Q020ConvertStringToInt.ConvertString(input);
             Assert.AreEqual(12345, actual);
         }
     }

@@ -58,6 +58,7 @@
     <Compile Include="Commons\Matrix.cs" />
     <Compile Include="Commons\MultipleTreeNode.cs" />
     <Compile Include="Commons\Vector.cs" />
+    <Compile Include="ResumeQuestions\Q008_2_FindOnlyOneDuplicateInArray.cs" />
     <Compile Include="ResumeQuestions\Q021FindSumMFromNNumbers.cs" />
     <Compile Include="CsvParser.cs" />
     <Compile Include="ResumeQuestions\Q026LeftShiftArray.cs" />
@@ -99,7 +100,7 @@
     <Compile Include="ResumeQuestions\Q504Put10NumbersInto4X4Grid.cs" />
     <Compile Include="ResumeQuestions\Q505FindAllMoneyCombination.cs" />
     <Compile Include="ResumeQuestions\Q506SimulateQueueWith2Stacks.cs" />
-    <Compile Include="ResumeQuestions\Q507ConvertStringToInt.cs" />
+    <Compile Include="ResumeQuestions\Q020ConvertStringToInt.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

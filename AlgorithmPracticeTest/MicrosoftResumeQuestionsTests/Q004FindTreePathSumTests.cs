@@ -23,6 +23,9 @@ namespace AlgorithmPracticeTest.MicrosoftResumeQuestionsTests
                 Console.WriteLine(path);
             }
 
+            var expect = new[] {"10->5->7", "10->12"};
+            CollectionAssert.AreEquivalent(expect, obj.Paths);
+
             Console.WriteLine("==========================================");
             root = BinaryTreeHelper.BuildTree(new[] { 10, 5, 12, 4, 7, 0, 0, 3 }, new List<int> { 0, 1, 2, 3, 4, 7 });
             obj.FindTreePathSumInt32(root, 22);
@@ -32,6 +35,9 @@ namespace AlgorithmPracticeTest.MicrosoftResumeQuestionsTests
                 Console.WriteLine(path);
             }
 
+            expect = new[] {"10->5->4->3", "10->5->7", "10->12"};
+            CollectionAssert.AreEquivalent(expect, obj.Paths);
+
             Console.WriteLine("==========================================");
             root = BinaryTreeHelper.BuildTree(new[] { 10, 5, 12, 4, 9, 0, 0, 3 }, new List<int> { 0, 1, 2, 3, 4, 7 });
             obj.FindTreePathSumInt32(root, 22);
@@ -40,6 +46,9 @@ namespace AlgorithmPracticeTest.MicrosoftResumeQuestionsTests
             {
                 Console.WriteLine(path);
             }
+
+            expect = new[] {"10->5->4->3", "10->12"};
+            CollectionAssert.AreEquivalent(expect, obj.Paths);
         }
     }
 }

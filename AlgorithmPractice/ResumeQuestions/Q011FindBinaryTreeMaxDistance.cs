@@ -31,11 +31,10 @@ namespace AlgorithmPractice.ResumeQuestions
                 return 0;
             }
 
-            int ld, rd;
-            var maxleft = FindNodeMaxDistance(root.LeftChild, out ld);
-            var maxright = FindNodeMaxDistance(root.RightChild, out rd);
+            var maxleft = FindNodeMaxDistance(root.LeftChild, out var ld);
+            var maxright = FindNodeMaxDistance(root.RightChild, out var rd);
             depth = Math.Max(ld, rd) + 1;
-            return Math.Max(maxleft, Math.Max(maxright, ld + rd));
+            return MathHelper.Max(maxleft, maxright, ld + rd);
         }
     }
 }

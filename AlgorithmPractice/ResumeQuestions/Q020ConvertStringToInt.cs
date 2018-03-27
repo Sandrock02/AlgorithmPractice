@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AlgorithmPractice.ResumeQuestions
 {
-    public static class Q507ConvertStringToInt
+    public static class Q020ConvertStringToInt
     {
         public static int ConvertString(string str, IFormatProvider formatProvider = null)
         {
