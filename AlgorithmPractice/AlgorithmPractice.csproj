@@ -101,6 +101,7 @@
     <Compile Include="ResumeQuestions\Q505FindAllMoneyCombination.cs" />
     <Compile Include="ResumeQuestions\Q506SimulateQueueWith2Stacks.cs" />
     <Compile Include="ResumeQuestions\Q020ConvertStringToInt.cs" />
+    <Compile Include="ResumeQuestions\Q507MatchNBrackets.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
