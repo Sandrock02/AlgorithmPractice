@@ -93,7 +93,7 @@
     <Compile Include="MicrosoftResumeQuestionsTests\Q506SimulateQueueWith2StacksTests.cs" />
     <Compile Include="MicrosoftResumeQuestionsTests\Q020ConvertStringToIntTests.cs" />
     <Compile Include="MicrosoftResumeQuestionsTests\Q056LongestCommonSequenceTests.cs" />
-    <Compile Include="MicrosoftResumeQuestionsTests\Q053ArrangeAllCharactorsTests.cs" />
+    <Compile Include="MicrosoftResumeQuestionsTests\Q053ArrangeAllCharactersTests.cs" />
     <Compile Include="MicrosoftResumeQuestionsTests\Q008_2_FindOnlyOneDuplicateInArrayTests.cs" />
     <Compile Include="MicrosoftResumeQuestionsTests\Q507MatchNBracketsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -16,5 +16,16 @@ namespace AlgorithmPracticeTest.Algorithms.Sort
 
             CollectionAssert.AreEquivalent(e, a);
         }
+
+        [TestMethod]
+        public void TestMergeSortWith1Element()
+        {
+            var a = new[] { 56 };
+            var e = new[] { 56 };
+
+            MergeSort.Sort(a);
+
+            CollectionAssert.AreEquivalent(e, a);
+        }
     }
 }

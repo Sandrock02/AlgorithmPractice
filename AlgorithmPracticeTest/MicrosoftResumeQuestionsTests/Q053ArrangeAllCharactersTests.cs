@@ -5,12 +5,12 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace AlgorithmPracticeTest.MicrosoftResumeQuestionsTests
 {
     [TestClass]
-    public class Q053ArrangeAllCharactorsTests
+    public class Q053ArrangeAllCharactersTests
     {
         [TestMethod]
         public void TestGetAllArranges_1()
         {
-            var actual = Q053ArrangeAllCharactors.GetAllArranges("abc");
+            var actual = Q053ArrangeAllCharacters.GetAllArranges("abc");
             var expect = new[] {"abc", "acb", "bac", "bca", "cab", "cba"};
             CollectionAssert.AreEquivalent(expect, actual);
         }
@@ -18,7 +18,7 @@ namespace AlgorithmPracticeTest.MicrosoftResumeQuestionsTests
         [TestMethod]
         public void TestGetAllArranges_2()
         {
-            var actual = Q053ArrangeAllCharactors.GetAllArranges("abcd");
+            var actual = Q053ArrangeAllCharacters.GetAllArranges("abcd");
             var expect = new[]
             {
                 "abcd", "abdc", "acbd", "acdb", "adbc", "adcb",
@@ -32,7 +32,7 @@ namespace AlgorithmPracticeTest.MicrosoftResumeQuestionsTests
         [TestMethod]
         public void TestGetAllArranges2_1()
         {
-            var actual = Q053ArrangeAllCharactors.GetAllArranges2("abc");
+            var actual = Q053ArrangeAllCharacters.GetAllArranges2("abc");
             var expect = new[] {"abc", "acb", "bac", "bca", "cab", "cba"};
             CollectionAssert.AreEquivalent(expect, actual);
         }
@@ -40,7 +40,7 @@ namespace AlgorithmPracticeTest.MicrosoftResumeQuestionsTests
         [TestMethod]
         public void TestGetAllArranges2_2()
         {
-            var actual = Q053ArrangeAllCharactors.GetAllArranges2("abcd");
+            var actual = Q053ArrangeAllCharacters.GetAllArranges2("abcd");
             var expect = new[]
             {
                 "abcd", "abdc", "acbd", "acdb", "adbc", "adcb",

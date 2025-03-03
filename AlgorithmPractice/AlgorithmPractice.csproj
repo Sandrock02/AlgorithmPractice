@@ -81,7 +81,7 @@
     <Compile Include="ResumeQuestions\Q014FindSpecificSumInSortedArray.cs" />
     <Compile Include="ResumeQuestions\Q016PrintBinaryTreeNodeByLevel.cs" />
     <Compile Include="ResumeQuestions\Q028Find1CountInNumber.cs" />
-    <Compile Include="ResumeQuestions\Q053ArrangeAllCharactors.cs" />
+    <Compile Include="ResumeQuestions\Q053ArrangeAllCharacters.cs" />
     <Compile Include="ResumeQuestions\Q056LongestCommonSequence.cs" />
     <Compile Include="ResumeQuestions\Q075FindMostCloseBinaryNode.cs" />
     <Compile Include="ResumeQuestions\Q101ReverseEvery2NodesInLinkedList.cs" />

@@ -12,7 +12,7 @@ namespace AlgorithmPractice.ResumeQuestions
     /// 例如输入字符串 abc ，则输出由字符 a、b、c 所能排列出来的有字符串
     /// abc, acb, bac, bca, cab 和 cba。
     /// </remarks>
-    public class Q053ArrangeAllCharactors
+    public class Q053ArrangeAllCharacters
     {
         public static List<string> GetAllArranges(string chars)
         {
