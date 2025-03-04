@@ -1,121 +1,24 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8F05FB25-250C-45A1-A2A6-E996E81AAD2F}</ProjectGuid>
+    <TargetFramework>net8.0</TargetFramework>
     <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AlgorithmPractice</RootNamespace>
-    <AssemblyName>AlgorithmPractice</AssemblyName>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
-    <TargetFrameworkProfile />
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Algorithms\ArrayIntersectHelper.cs" />
-    <Compile Include="Algorithms\BigNumbers\BigNumberHelper.cs" />
-    <Compile Include="Algorithms\Fibonacci.cs" />
-    <Compile Include="Algorithms\HeapHelper.cs" />
-    <Compile Include="Algorithms\TreeRelated\TreeWalk.cs" />
-    <Compile Include="Commons\MathHelper.cs" />
-    <Compile Include="Commons\Matrix.cs" />
-    <Compile Include="Commons\MultipleTreeNode.cs" />
-    <Compile Include="Commons\Vector.cs" />
-    <Compile Include="ResumeQuestions\Q008_2_FindOnlyOneDuplicateInArray.cs" />
-    <Compile Include="ResumeQuestions\Q021FindSumMFromNNumbers.cs" />
-    <Compile Include="CsvParser.cs" />
-    <Compile Include="ResumeQuestions\Q026LeftShiftArray.cs" />
-    <Compile Include="CommonHelpers.cs" />
-    <Compile Include="Commons\BinaryTreeHelper.cs" />
-    <Compile Include="Commons\BinaryTreeNode.cs" />
-    <Compile Include="Commons\LinkedListHelper.cs" />
-    <Compile Include="Commons\LinkedNode.cs" />
-    <Compile Include="Commons\LinkedNode2Way.cs" />
-    <Compile Include="Commons\Node.cs" />
-    <Compile Include="ResumeQuestions\Q009CheckPostOrderResult.cs" />
-    <Compile Include="ResumeQuestions\Q001ConvertBSTreeToLinkedList.cs" />
-    <Compile Include="ResumeQuestions\Q002StackWithMinValue.cs" />
-    <Compile Include="ResumeQuestions\Q003FindMaxSumValueOfSubArray.cs" />
-    <Compile Include="ResumeQuestions\Q004FindTreePathSum.cs" />
-    <Compile Include="ResumeQuestions\Q007CheckLinkedListsAreJoin.cs" />
-    <Compile Include="ResumeQuestions\Q008ReverseLinkedList.cs" />
-    <Compile Include="ResumeQuestions\Q010ReverseSetenceByWords.cs" />
-    <Compile Include="ResumeQuestions\Q011FindBinaryTreeMaxDistance.cs" />
-    <Compile Include="ResumeQuestions\Q014FindSpecificSumInSortedArray.cs" />
-    <Compile Include="ResumeQuestions\Q016PrintBinaryTreeNodeByLevel.cs" />
-    <Compile Include="ResumeQuestions\Q028Find1CountInNumber.cs" />
-    <Compile Include="ResumeQuestions\Q053ArrangeAllCharacters.cs" />
-    <Compile Include="ResumeQuestions\Q056LongestCommonSequence.cs" />
-    <Compile Include="ResumeQuestions\Q075FindMostCloseBinaryNode.cs" />
-    <Compile Include="ResumeQuestions\Q101ReverseEvery2NodesInLinkedList.cs" />
-    <Compile Include="Algorithms\Search\BinarySearch.cs" />
-    <Compile Include="Algorithms\Sort\BubbleSort.cs" />
-    <Compile Include="Algorithms\Sort\MergeSort.cs" />
-    <Compile Include="Algorithms\Sort\QuickSort.cs" />
-    <Compile Include="Algorithms\StringMatch\BMMatch.cs" />
-    <Compile Include="Algorithms\FindKMin.cs" />
-    <Compile Include="Algorithms\StringMatch\KMPMatch.cs" />
-    <Compile Include="ResumeQuestions\Q501FindClosestBiggerValueInTree.cs" />
-    <Compile Include="ResumeQuestions\Q502FindLeafEmployees.cs" />
-    <Compile Include="ResumeQuestions\Q503FindSmallestPositiveMissingInteger.cs" />
-    <Compile Include="OtherStructures\SelfRefObject.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ResumeQuestions\Q504Put10NumbersInto4X4Grid.cs" />
-    <Compile Include="ResumeQuestions\Q505FindAllMoneyCombination.cs" />
-    <Compile Include="ResumeQuestions\Q506SimulateQueueWith2Stacks.cs" />
-    <Compile Include="ResumeQuestions\Q020ConvertStringToInt.cs" />
-    <Compile Include="ResumeQuestions\Q507MatchNBrackets.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="ResumeQuestions\Questions.txt" />
   </ItemGroup>
-  <ItemGroup />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="ResumeQuestions\Q053PrintAllPermutation.cs" />
+    <Compile Remove="ResumeQuestions\Q061FindNumberOnlyOccurOnce.cs" />
+  </ItemGroup>
 </Project>

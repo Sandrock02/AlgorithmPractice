@@ -8,23 +8,23 @@
     {
         public MultipleTreeNode()
         {
-            this.Children = new List<MultipleTreeNode<T>>();
+            Children = new List<MultipleTreeNode<T>>();
         }
 
         public MultipleTreeNode(T value, params MultipleTreeNode<T>[] children)
         {
-            this.Value = value;
-            this.Children = new List<MultipleTreeNode<T>>();
+            Value = value;
+            Children = new List<MultipleTreeNode<T>>();
 
             if (children != null)
             {
-                this.Children.AddRange(children);
+                Children.AddRange(children);
             }
         }
 
         public T Value { get; set; }
 
-        public List<MultipleTreeNode<T>> Children { get; set; }
+        public List<MultipleTreeNode<T>> Children { get; }
 
         public object Tag { get; set; }
 
@@ -41,7 +41,7 @@
                 return 1;
             }
 
-            return this.Value.CompareTo(other.Value);
+            return Value.CompareTo(other.Value);
         }
     }
 }
