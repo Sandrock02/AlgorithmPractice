@@ -26,26 +26,19 @@ namespace AlgorithmPractice.ResumeQuestions
     /// </remarks>
     public class Q004FindTreePathSum
     {
-        public List<string> Paths { get; set; }
-
-        public Q004FindTreePathSum()
-        {
-            Paths = new List<string>();
-        }
-
-        public void FindTreePathSumInt32(BinaryTreeNode<int> root, long sum)
+        public List<string> FindTreePathSumInt32(BinaryTreeNode<int> root, long sum)
         {
             if (root == null) throw new ArgumentNullException();
 
             var pathStack = new Stack<BinaryTreeNode<int>>();
 
-            Paths.Clear();
-            GetChildSum(root, pathStack, sum);
+            return GetChildSum(root, pathStack, sum);
         }
 
-        private void GetChildSum(BinaryTreeNode<int> node, Stack<BinaryTreeNode<int>> pathStack, long sum)
+        private List<string> GetChildSum(BinaryTreeNode<int> node, Stack<BinaryTreeNode<int>> pathStack, long sum)
         {
-            if (node == null) return;
+            var resultPaths = new List<string>();
+            if (node == null) return resultPaths;
 
             pathStack.Push(node);
             sum -= node.Value;
@@ -53,19 +46,22 @@ namespace AlgorithmPractice.ResumeQuestions
             {
                 var result = pathStack.Select(t => t.Value).ToList();
                 result.Reverse();
-                Paths.Add(string.Join("->", result));
+                resultPaths.Add(string.Join("->", result));
 
                 pathStack.Pop();
-                return;
+                return resultPaths;
             };
 
             if (sum > 0)
             {
-                GetChildSum(node.LeftChild, pathStack, sum);
-                GetChildSum(node.RightChild, pathStack, sum);
+                var rLeft = GetChildSum(node.LeftChild, pathStack, sum);
+                var rRight = GetChildSum(node.RightChild, pathStack, sum);
+                resultPaths.AddRange(rLeft);
+                resultPaths.AddRange(rRight);
             }
 
             pathStack.Pop();
+            return resultPaths;
         }
     }
 }

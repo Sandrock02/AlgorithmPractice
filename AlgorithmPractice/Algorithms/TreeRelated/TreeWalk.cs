@@ -36,7 +36,7 @@
 
             if (TreeWalkType.Normal == treeWalkType)
             {
-                MidOrderNormal(tree, output);
+                MidOrderNormal2(tree, output);
             }
             else
             {
@@ -152,16 +152,19 @@
             var node = tree;
             while (node != null || stack.Count > 0)
             {
+                // 先将当前节点的所有左子节点压入栈
                 while (node != null)
                 {
                     stack.Push(node);
                     node = node.LeftChild;
                 }
 
+                // 弹出栈顶节点并访问
                 if (stack.Count > 0)
                 {
                     node = stack.Pop();
                     output.Add(node.Value);
+                    // 转向右子树
                     node = node.RightChild;
                 }
             }

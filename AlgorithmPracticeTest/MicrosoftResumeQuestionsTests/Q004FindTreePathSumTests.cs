@@ -14,41 +14,41 @@ namespace AlgorithmPracticeTest.MicrosoftResumeQuestionsTests
         [TestMethod]
         public void Q004FindTreePathSumTest()
         {
-            var root = BinaryTreeHelper.BuildTree(new [] {10, 5, 12, 4, 7}, new List<int> {0, 1, 2, 3, 4});
+            var root = BinaryTreeHelper.BuildTree([10, 5, 12, 4, 7], new List<int> {0, 1, 2, 3, 4});
             var obj = new Q004FindTreePathSum();
-            obj.FindTreePathSumInt32(root, 22);
+            var paths = obj.FindTreePathSumInt32(root, 22);
 
-            foreach (var path in obj.Paths)
+            foreach (var path in paths)
             {
                 Console.WriteLine(path);
             }
 
             var expect = new[] {"10->5->7", "10->12"};
-            CollectionAssert.AreEquivalent(expect, obj.Paths);
+            CollectionAssert.AreEquivalent(expect, paths);
 
             Console.WriteLine("==========================================");
-            root = BinaryTreeHelper.BuildTree(new[] { 10, 5, 12, 4, 7, 0, 0, 3 }, new List<int> { 0, 1, 2, 3, 4, 7 });
-            obj.FindTreePathSumInt32(root, 22);
+            root = BinaryTreeHelper.BuildTree([10, 5, 12, 4, 7, 0, 0, 3], new List<int> { 0, 1, 2, 3, 4, 7 });
+            paths = obj.FindTreePathSumInt32(root, 22);
 
-            foreach (var path in obj.Paths)
+            foreach (var path in paths)
             {
                 Console.WriteLine(path);
             }
 
-            expect = new[] {"10->5->4->3", "10->5->7", "10->12"};
-            CollectionAssert.AreEquivalent(expect, obj.Paths);
+            expect = ["10->5->4->3", "10->5->7", "10->12"];
+            CollectionAssert.AreEquivalent(expect, paths);
 
             Console.WriteLine("==========================================");
-            root = BinaryTreeHelper.BuildTree(new[] { 10, 5, 12, 4, 9, 0, 0, 3 }, new List<int> { 0, 1, 2, 3, 4, 7 });
-            obj.FindTreePathSumInt32(root, 22);
+            root = BinaryTreeHelper.BuildTree([10, 5, 12, 4, 9, 0, 0, 3], new List<int> { 0, 1, 2, 3, 4, 7 });
+            paths = obj.FindTreePathSumInt32(root, 22);
 
-            foreach (var path in obj.Paths)
+            foreach (var path in paths)
             {
                 Console.WriteLine(path);
             }
 
-            expect = new[] {"10->5->4->3", "10->12"};
-            CollectionAssert.AreEquivalent(expect, obj.Paths);
+            expect = ["10->5->4->3", "10->12"];
+            CollectionAssert.AreEquivalent(expect, paths);
         }
     }
 }
