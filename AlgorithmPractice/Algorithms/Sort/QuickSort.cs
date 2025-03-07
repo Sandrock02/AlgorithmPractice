@@ -11,8 +11,10 @@ namespace AlgorithmPractice.Algorithms.Sort
         {
             if (low < up)
             {
+                // 初始，i，j，分别指向数组的开头和结尾元素
                 var i = low;
                 var j = up;
+                // 缓存 a[i]的元素到t
                 var t = a[i];
                 while (i != j)
                 {
@@ -20,6 +22,8 @@ namespace AlgorithmPractice.Algorithms.Sort
                     {
                         j--;
                     }
+                    // 此处while的退出条件有两个，我们只关心第二个，
+                    // 所以第一个条件需要再判断，此时交换a[j]到i的位置
                     if (i < j) a[i++] = a[j];
 
                     while (i < j && a[i] <= t)

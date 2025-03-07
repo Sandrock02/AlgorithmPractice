@@ -54,9 +54,7 @@ namespace AlgorithmPractice
 
             while (startIndex < endIndex)
             {
-                T temp = array[startIndex];
-                array[startIndex] = array[endIndex];
-                array[endIndex] = temp;
+                (array[startIndex], array[endIndex]) = (array[endIndex], array[startIndex]);
 
                 startIndex++;
                 endIndex--;
